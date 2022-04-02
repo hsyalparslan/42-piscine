@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 15:39:50 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/28 05:09:33 by harslan          ###   ########.fr       */
+/*   Created: 2022/03/27 23:42:14 by harslan           #+#    #+#             */
+/*   Updated: 2022/03/27 23:43:25 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_ultimate_ft(int *********nbr)
 {
-	int	numbers;
-
-	numbers = 48;
-	while (numbers <= 57)
-	{
-		write(1, &numbers, 1);
-		numbers++;
-	}
+	*********nbr = 42;
 }

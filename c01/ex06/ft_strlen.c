@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 15:39:50 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/28 05:09:33 by harslan          ###   ########.fr       */
+/*   Created: 2022/03/31 02:17:53 by harslan           #+#    #+#             */
+/*   Updated: 2022/03/31 02:18:29 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int	ft_strlen(char *str)
 {
-	int	numbers;
+	int	length;
 
-	numbers = 48;
-	while (numbers <= 57)
+	length = 0;
+	while (str[length] != '\0')
 	{
-		write(1, &numbers, 1);
-		numbers++;
+		length++;
 	}
+	return (length);
 }

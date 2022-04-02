@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 15:39:50 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/28 05:09:33 by harslan          ###   ########.fr       */
+/*   Created: 2022/03/30 20:00:31 by harslan           #+#    #+#             */
+/*   Updated: 2022/03/31 01:00:52 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int	numbers;
-
-	numbers = 48;
-	while (numbers <= 57)
-	{
-		write(1, &numbers, 1);
-		numbers++;
-	}
+	*div = a / b;
+	*mod = a % b;
 }

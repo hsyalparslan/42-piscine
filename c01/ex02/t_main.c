@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   t_main.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 15:39:50 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/28 05:09:33 by harslan          ###   ########.fr       */
+/*   Created: 2022/03/28 04:51:33 by harslan           #+#    #+#             */
+/*   Updated: 2022/03/31 02:43:50 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+void	ft_swap(int *a, int *b);
+
+int	main(void)
 {
-	int	numbers;
+	int a;
+	int b;
 
-	numbers = 48;
-	while (numbers <= 57)
-	{
-		write(1, &numbers, 1);
-		numbers++;
-	}
+	int x;
+	int y;
+
+	x = 5;
+	y = 2;
+	a = 1;
+	b = 2;
+	ft_swap(&a, &b);
+	printf("%i %i", a, b);
 }

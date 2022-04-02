@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 15:39:50 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/28 05:09:33 by harslan          ###   ########.fr       */
+/*   Created: 2022/03/31 03:58:38 by harslan           #+#    #+#             */
+/*   Updated: 2022/04/02 02:58:19 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+char	*ft_strupcase(char *str)
 {
-	int	numbers;
+	int	i;
 
-	numbers = 48;
-	while (numbers <= 57)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write(1, &numbers, 1);
-		numbers++;
+		if (str[i] > 96 && str[i] < 123)
+		{
+			str[i] -= 32;
+		}
+		i++;
 	}
+	return (str);
 }

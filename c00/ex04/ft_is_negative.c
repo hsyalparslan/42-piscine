@@ -6,7 +6,7 @@
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 22:52:30 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/27 22:53:55 by harslan          ###   ########.fr       */
+/*   Updated: 2022/03/28 05:16:13 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_is_negative(int n)
 {
-	if (n >= 0)
-		write (1, "P", 1);
-	else
+	if (n < 0)
 		write (1, "N", 1);
+	else
+		write (1, "P", 1);
 }

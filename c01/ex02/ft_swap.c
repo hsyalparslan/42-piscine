@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 15:39:50 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/28 05:09:33 by harslan          ###   ########.fr       */
+/*   Created: 2022/03/28 04:50:11 by harslan           #+#    #+#             */
+/*   Updated: 2022/03/31 02:23:06 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_swap(int *a, int *b)
 {
-	int	numbers;
+	int	tmp;
 
-	numbers = 48;
-	while (numbers <= 57)
-	{
-		write(1, &numbers, 1);
-		numbers++;
-	}
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

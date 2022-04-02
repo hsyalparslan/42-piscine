@@ -6,7 +6,7 @@
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 19:17:39 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/27 23:02:20 by harslan          ###   ########.fr       */
+/*   Updated: 2022/03/28 07:08:08 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr(int nb)
 	{
 		ft_putchar('-');
 		ft_putchar('2');
-		nb = 147483648;
+		nb = 2147483647;
 	}
 	if (nb < 0)
 	{
@@ -39,4 +39,10 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
 	}
+}
+
+int main()
+{
+	ft_putnbr(123456);
+	return 0;
 }
