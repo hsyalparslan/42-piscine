@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 02:19:03 by harslan           #+#    #+#             */
-/*   Updated: 2022/04/05 09:07:58 by harslan          ###   ########.fr       */
+/*   Created: 2022/03/31 03:58:38 by harslan           #+#    #+#             */
+/*   Updated: 2022/04/05 08:29:34 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+int	ft_strlen(char *str)
 {
-	int	c;
-	int	index;
-	int	temp;
+	int	len;
 
-	c = 0;
-	temp = 0;
-	while (c < size / 2)
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
+}
+
+char	*ft_strcpy(char *dest, char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
 	{
-		temp = tab[c];
-		tab[c] = tab[size];
-		tab[size] = temp;
-		size--;
-		c++;
+		dest[i] = src[i];
+		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+char	*ft_strcat(char *dest, char *src)
+{
+	ft_strcpy (dest + ft_strlen (dest), src);
+	return (dest);
 }

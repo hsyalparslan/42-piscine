@@ -1,29 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 02:19:03 by harslan           #+#    #+#             */
-/*   Updated: 2022/04/05 09:07:58 by harslan          ###   ########.fr       */
+/*   Created: 2022/04/04 20:29:19 by harslan           #+#    #+#             */
+/*   Updated: 2022/04/05 08:44:29 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_rev_int_tab(int *tab, int size)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int	c;
-	int	index;
-	int	temp;
+	int	i;
+	int	j;
+	int	k;
 
-	c = 0;
-	temp = 0;
-	while (c < size / 2)
+	i = 0;
+	j = 0;
+	if (!*to_find)
+		return (str);
+	while (str[i] != '\0')
 	{
-		temp = tab[c];
-		tab[c] = tab[size];
-		tab[size] = temp;
-		size--;
-		c++;
+		if (to_find[0] == str[i])
+		{
+			k = i;
+			while (to_find[j] == str[k] && str[k])
+			{
+				k++;
+				j++;
+			}
+			if (to_find[j] == '\0')
+				return (&str[i]);
+			j = 0;
+		}
+		i++;
 	}
+	return (0);
 }

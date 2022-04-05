@@ -6,7 +6,7 @@ int	main(void)
 {
 	int size;
 	int tab[] = {19, 10, 5, 8, 7, 9, 8, 8};
-	size = 8;
+	size = 7;
 	ft_rev_int_tab(tab, size);
 	printf("%d\n", tab[0]);
 	printf("%d\n", tab[1]);

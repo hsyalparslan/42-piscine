@@ -6,10 +6,10 @@
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 23:18:24 by harslan           #+#    #+#             */
-/*   Updated: 2022/03/27 23:19:57 by harslan          ###   ########.fr       */
+/*   Updated: 2022/04/05 01:05:25 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <unistd.h>
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
