@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 09:39:35 by harslan           #+#    #+#             */
-/*   Updated: 2022/04/08 01:29:48 by harslan          ###   ########.fr       */
+/*   Created: 2022/04/08 03:33:31 by harslan           #+#    #+#             */
+/*   Updated: 2022/04/08 03:43:41 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
-void	ft_putstr(char *str)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	main(int ac, char **av)
 {
 	int	i;
+	int	j;
 
-	i = 0;
-	while (str[i])
+	i = 1;
+	j = 0;
+	while (i < ac)
 	{
-		write(1, &str[i], 1);
+		while (av[i][j] != '\0')
+		{
+			ft_putchar(av[i][j]);
+			j++;
+		}
+		ft_putchar('\n');
+		j = 0;
 		i++;
 	}
+	return (0);
 }

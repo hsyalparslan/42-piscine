@@ -5,10 +5,10 @@ char	*ft_strstr(char *str, char *to_find);
 int	main(void)
 {
 
-	char needle [] = "";
-	char haystack [] = "78";
- char needle2 [] = "";
-    char haystack2 [] = "78";
+	char needle [] = "nedle";
+	char haystack [] = "HaysntackhaystacknedleHaystack";
+ char needle2 [] = "nedle";
+    char haystack2 [] = "HanystackhaystacknedleHaystack";
 	printf("%s\n", ft_strstr(haystack, needle)); 
 	printf("%s", strstr(haystack2, needle2));
 

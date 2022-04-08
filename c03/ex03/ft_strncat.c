@@ -6,13 +6,13 @@
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 03:58:38 by harslan           #+#    #+#             */
-/*   Updated: 2022/04/05 08:31:19 by harslan          ###   ########.fr       */
+/*   Updated: 2022/04/07 17:34:35 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int	len;
+	unsigned int	len;
 
 	len = 0;
 	while (str[len] != '\0')
