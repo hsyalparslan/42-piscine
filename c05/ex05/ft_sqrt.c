@@ -1,51 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/08 03:33:31 by harslan           #+#    #+#             */
-/*   Updated: 2022/04/08 03:57:57 by harslan          ###   ########.fr       */
+/*   Created: 2022/04/11 22:05:24 by harslan           #+#    #+#             */
+/*   Updated: 2022/04/11 23:23:11 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_sqrt(int nb)
 {
-	write(1, &c, 1);
-}
+	long int	n;
 
-int ft_strcmp(char *s1, char *s2)
-{
-    int i;
-
-    i = 0;
-    while ((s1[i] == s2[i]) && (s1[i] != '\0' || s2[i] != '\0'))
-    {
-        i++;
-    }
-	return (s1[i] - s2[i]);
-}
-
-int	main(int ac, char **av)
-{
-	int	i;
-	int	j;
-
-	i = ac - 1;
-	j = 0;
-	while (i > 0)
+	n = 1;
+	if (nb > 0)
 	{
-		while (av[i][j] != '\0')
+		while (n * n <= nb)
 		{
-			ft_putchar(av[i][j]);
-			j++;
+			if (n * n == nb)
+				return (n);
+			n++;
 		}
-		ft_putchar('\n');
-		j = 0;
-		i--;
 	}
 	return (0);
 }
