@@ -6,7 +6,7 @@
 /*   By: harslan <harslan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 02:32:16 by harslan           #+#    #+#             */
-/*   Updated: 2022/04/12 03:33:11 by harslan          ###   ########.fr       */
+/*   Updated: 2022/04/12 11:20:44 by harslan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	*ft_range(int min, int max)
 		return (NULL);
 	while (max != min)
 	{
-		*range++ = min++;
+		range[min] = min++;
 	}
-	return (range - n);
+	return (range);
 }
